@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Genre UI</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: serif;
+      color: rgb(239, 34, 185);
+      transition: background-image 0.8s ease-in-out;
+    }
+    .container {
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+      background-size: cover;
+      background-position: center;
+    }
+    .nav {
+      display: flex;
+      align-items: center;
+      padding: 10px 20px;
+      background-color: rgba(0, 0, 0, 0.6);
+    }
+    .nav img {
+      height: 40px;
+      width: 40px;
+      border-radius: 50%;
+      margin-right: 20px;
+    }
+    .nav a {
+      color: white;
+      text-decoration: none;
+      margin-right: 20px;
+      font-size: 16px;
+    }
+    .nav a.active {
+      background: pink;
+      padding: 6px 12px;
+      border-radius: 10px;
+      color: black;
+      font-weight: bold;
+    }
+    .main {
+      display: flex;
+      flex: 1;
+    }
+    .sidebar {
+      padding: 40px;
+      font-size: 24px;
+    }
+    .genre {
+      margin-bottom: 15px;
+      display: flex;
+      align-items: center;
+      cursor: pointer;
+      position: relative;
+    }
+    .arrow {
+      color: #e11d48;
+      position: absolute;
+      left: -20px;
+      transition: opacity 0.3s ease;
+      margin-right: 10px;
+      opacity: 0;
+    }
+    .genre.hovered .arrow {
+      opacity: 1;
+    }
+    .genre.hovered {
+      font-weight: bold;
+    }
+    .genre:hover {
+  background-color: rgba(255, 255, 255, 0.866);
+  border-radius: 8px;
+  padding-left: 10px;
+}
+
+    .highlight {
+      margin: auto;
+      text-align: center;
+      background-color: rgba(0, 0, 0, 0.5);
+      padding: 20px;
+      border-radius: 16px;
+    }
+    .tags {
+      margin-top: 10px;
+    }
+    .tags span {
+      margin-right: 10px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container" id="background">
+    <div class="nav">
+      <img src="Genre-main/howl chibi.jpg" alt="avatar">
+      <a href="#">For you</a>
+      <a href="#" class="active">Browse</a>
+      <a href="#">My History</a>
+    </div>
+
+    <div class="main">
+      <div class="sidebar" id="genre-list">
+      </div>
+      <div class="highlight" id="highlight">
+        <h1>Howl’s Moving Castle</h1>
+        <div class="tags">
+          <span>● Animation</span>
+          <span>● Fantasy</span>
+          <span>● Romance</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    const genres = [
+      { name: "Action", background: "Genre-main/action1.jpg" },
+      { name: "Anime", background: "Genre-main/animemain.jpg" },
+      { name: "Comedy", background: "Genre-main/comedymain.jpg" },
+      { name: "Drama", background: "Genre-main/dramamain.jpg" },
+      { name: "Earth & Science", background: "Genre-main/earthandsciencemain.jpg" },
+      { name: "Fantasy", background: "Genre-main/fantasymain.jpg" },
+      { name: "Horror", background: "Genre-main/horrormain.jpg" },
+      { name: "Romance", background: "Genre-main/romancemain.jpg" },
+      { name: "Sci-fi", background: "Genre-main/scifimain.jpg" }
+    ];
+
+    const genreList = document.getElementById("genre-list");
+    const background = document.getElementById("background");
+    const highlight = document.getElementById("highlight");
+
+    genres.forEach((genre, i) => {
+      const div = document.createElement("div");
+      div.className = "genre";
+      div.innerHTML = `<span class="arrow">▶</span>${genre.name}`;
+      div.addEventListener("mouseenter", () => {
+        document.querySelectorAll(".genre").forEach(el => el.classList.remove("hovered"));
+        div.classList.add("hovered");
+        background.style.backgroundImage = `url('${genre.background}')`;
+
+        if (genre.title && genre.tags) {
+          highlight.innerHTML = `
+            <h1>${genre.title}</h1>
+            <div class="tags">
+              ${genre.tags.map(tag => `<span>● ${tag}</span>`).join("")}
+            </div>
+          `;
+        } else {
+          highlight.innerHTML = `
+            <h1>${genre.name}</h1>
+            <div class="tags"><span>Explore the best of ${genre.name}</span></div>
+          `;
+        }
+      });
+
+      if (i === 1) div.classList.add("hovered");
+      genreList.appendChild(div);
+    });
+
+    background.style.backgroundImage = `url('${genres[1].background}')`;
+  </script>
+</body>
+</html>

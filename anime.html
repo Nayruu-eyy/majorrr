@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Anime Showcase</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: sans-serif;
+      background-color: #b03060;
+      color: white;
+      display: flex;
+      flex-direction: column;
+      height: 100vh;
+      overflow: hidden;
+    }
+
+    .nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background-color: rgba(0, 0, 0, 0.6);
+      padding: 10px 20px;
+      flex-shrink: 0;
+    }
+
+    .left-header {
+      display: flex;
+      align-items: center;
+      gap: 2rem;
+    }
+
+    .nav img {
+      height: 40px;
+      width: 40px;
+      border-radius: 50%;
+      margin-right: 20px;
+    }
+
+    .nav a {
+      color: white;
+      text-decoration: none;
+      margin-right: 20px;
+      font-size: 16px;
+    }
+
+    .nav a.active {
+      background: pink;
+      padding: 6px 12px;
+      border-radius: 10px;
+      color: black;
+      font-weight: bold;
+    }
+
+    .search-box {
+      background: #f7cde2;
+      border-radius: 20px;
+      padding: 0.5rem 1rem;
+      color: black;
+      font-weight: bold;
+    }
+
+    .top-container {
+      overflow-y: auto;
+      padding: 1rem 2rem;
+      flex-grow: 1;
+    }
+
+    .featured {
+      display: flex;
+      justify-content: center;
+      gap: 1.5rem;
+      flex-wrap: wrap;
+      margin-bottom: 2rem;
+    }
+
+    .featured img {
+      width: 300px;
+      height: 180px;
+      object-fit: cover;
+      border-radius: 15px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    }
+
+    h1 {
+      text-align: center;
+      font-size: 3rem;
+      letter-spacing: 1rem;
+      margin: 1rem 0;
+    }
+
+    .grid-section {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 1.5rem;
+    }
+
+    .anime-card {
+      background: #f3f3f3;
+      border-radius: 10px;
+      padding: 1rem;
+      color: black;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+    }
+
+    .anime-card img {
+      width: 100%;
+      border-radius: 8px;
+      margin-bottom: 0.5rem;
+      height: 220px;
+      object-fit: cover;
+    }
+
+    .anime-card h3 {
+      margin: 0.3rem 0;
+      
+    }
+
+    .top-container::-webkit-scrollbar {
+      width: 10px;
+    }
+
+    .top-container::-webkit-scrollbar-thumb {
+      background: #f7cde2;
+      border-radius: 10px;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="nav">
+    <div class="left-header">
+      <img src="movies-main/howl chibi.jpg" alt="User Avatar">
+      <a href="#">For you</a>
+      <a href="#" class="active">Browse</a>
+      <a href="#">My History</a>
+    </div>
+    <div class="search-box">Search</div>
+  </div>
+
+  <div class="top-container">
+    <section class="featured">
+      <img src="movies-main/Anime/aot.jpg" alt="Top Anime 1">
+      <img src="movies-main/Anime/onepiece.jpg" alt="Top Anime 2">
+      <img src="movies-main/Anime/kny.jpg" alt="Top Anime 3">
+    </section>
+
+    <h1>Anime</h1>
+
+    <section class="grid-section">
+      <div class="anime-card">
+        <img src="movies-main/Anime/anime1.jpg" alt="Wind Breaker">
+        <h3>Wind Breaker</h3>
+        <p>2024</p>
+      </div>
+      <div class="anime-card">
+        <img src="movies-main/Anime/anime2.jpg" alt="I Was Reincarnated as the 7th Prince so I Can Take My Time Perfecting My Magical Ability">
+        <h3>I Was Reincarnated as the 7th Prince so I Can Take My Time Perfecting My Magical Ability</h3>
+        <p>2024</p>
+      </div>
+      <div class="anime-card">
+        <img src="movies-main/Anime/anime3.jpg" alt="As a Reincarnated Aristocrat, I'll Use My Appraisal Skill to Rise in the World">
+        <h3>As a Reincarnated Aristocrat, I'll Use My Appraisal Skill to Rise in the World</h3>
+        <p>2024</p>
+      </div>
+      <div class="anime-card">
+        <img src="movies-main/Anime/anime4.jpg" alt="How to Become Ordinary">
+        <h3>How to Become Ordinary</h3>
+        <p>2025</p>
+      </div>
+      <div class="anime-card">
+        <img src="movies-main/Anime/anime5.jpg" alt="Mobile Suit Gundam GQuuuuuuX">
+        <h3>Mobile Suit Gundam GQuuuuuuX</h3>
+        <p>2024</p>
+      </div>
+      <div class="anime-card">
+        <img src="movies-main/Anime/anime6.png" alt="Dragon Ball DAIMA">
+        <h3>Dragon Ball DAIMA</h3>
+        <p>2024</p>
+      </div>
+      <div class="anime-card">
+        <img src="movies-main/Anime/anime7.jpg" alt="Rurouni Kenshin">
+        <h3>Rurouni Kenshin</h3>
+        <p>2023</p>
+      </div>
+      <div class="anime-card">
+        <img src="movies-main/Anime/anime8.jpg" alt="Dead Mount Deathplay">
+        <h3>Dead Mount Deathplay</h3>
+        <p>2023</p>
+      </div>
+      <div class="anime-card">
+        <img src="movies-main/Anime/anime9.jpeg" alt="Orb: On the Movements of the Earth">
+        <h3>Orb: On the Movements of the Earth</h3>
+        <p>2024</p>
+      </div>
+      <div class="anime-card">
+        <img src="movies-main/Anime/anime10.jpeg" alt="The Kingdoms of Ruin">
+        <h3>The Kingdoms of Ruin</h3>
+        <p>2023</p>
+      </div>
+      <div class="anime-card">
+        <img src="movies-main/Anime/anime11.jpeg" alt="Oshi no Ko">
+        <h3>Oshi no Ko</h3>
+        <p>2023</p>
+      </div>
+      <div class="anime-card">
+        <img src="movies-main/Anime/anime12.jpg" alt="My Love Story with Yamada-kun at Lv999">
+        <h3>My Love Story with Yamada-kun at Lv999</h3>
+        <p>2024</p>
+      </div>
+      <div class="anime-card">
+        <img src="movies-main/Anime/anime13.jpg" alt="NieR: Automata">
+        <h3>NieR: Automata</h3>
+        <p>2023</p>
+      </div>
+      <div class="anime-card">
+        <img src="movies-main/Anime/anime14.jpg" alt="Oblivion Battery">
+        <h3>Oblivion Battery</h3>
+        <p>2024</p>
+      </div>
+      <div class="anime-card">
+        <img src="movies-main/Anime/anime15.jpg" alt="The Most Notorious Talker Runs the World's Greatest Clan">
+        <h3>The Most Notorious "Talker" Runs the World's Greatest Clan</h3>
+        <p>2024</p>
+      </div>
+      <div class="anime-card">
+        <img src="movies-main/Anime/anime16.jpg" alt="Frieren: Beyond Journey's End">
+        <h3>Frieren: Beyond Journey's End</h3>
+        <p>2023</p>
+      </div>
+      <div class="anime-card">
+        <img src="movies-main/Anime/anime17.jpg" alt="Migi & Dali">
+        <h3>Migi & Dali</h3>
+        <p>2023</p>
+      </div>
+      <div class="anime-card">
+        <img src="movies-main/Anime/anime18.jpg" alt="Grandpa and Grandma Turn Young Again">
+        <h3>Grandpa and Grandma Turn Young Again</h3>
+        <p>2024</p>
+      </div>
+      <div class="anime-card">
+        <img src="movies-main/Anime/anime19.jpeg" alt="Castlevania: Nocturne">
+        <h3>Castlevania: Nocturne</h3>
+        <p>2023</p>
+      </div>
+      <div class="anime-card">
+        <img src="movies-main/Anime/anime20.png" alt="Hell's Paradise: Jigokuraku">
+        <h3>Hell's Paradise: Jigokuraku</h3>
+        <p>2023</p>
+      </div>
+      <div class="anime-card">
+        <img src="movies-main/Anime/anime21.jpg" alt="DANDADAN">
+        <h3>DANDADAN</h3>
+        <p>2024</p>
+      </div>
+    </section>
+  </div>
+
+</body>
+</html>
