@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Comedy Showcase</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: sans-serif;
+      background-color: #b03060;
+      color: white;
+      display: flex;
+      flex-direction: column;
+      height: 100vh;
+      overflow: hidden;
+    }
+
+    .nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background-color: rgba(0, 0, 0, 0.6);
+      padding: 10px 20px;
+      flex-shrink: 0;
+    }
+
+    .left-header {
+      display: flex;
+      align-items: center;
+      gap: 2rem;
+    }
+
+    .nav img {
+      height: 40px;
+      width: 40px;
+      border-radius: 50%;
+      margin-right: 20px;
+    }
+
+    .nav a {
+      color: white;
+      text-decoration: none;
+      margin-right: 20px;
+      font-size: 16px;
+    }
+
+    .nav a.active {
+      background: pink;
+      padding: 6px 12px;
+      border-radius: 10px;
+      color: black;
+      font-weight: bold;
+    }
+
+    .search-box {
+      background: #f7cde2;
+      border-radius: 20px;
+      padding: 0.5rem 1rem;
+      color: black;
+      font-weight: bold;
+    }
+
+    .top-container {
+      overflow-y: auto;
+      padding: 1rem 2rem;
+      flex-grow: 1;
+    }
+
+    .featured {
+      display: flex;
+      justify-content: center;
+      gap: 1.5rem;
+      flex-wrap: wrap;
+      margin-bottom: 2rem;
+    }
+
+    .featured img {
+      width: 300px;
+      height: 180px;
+      object-fit: cover;
+      border-radius: 15px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    }
+
+    h1 {
+      text-align: center;
+      font-size: 3rem;
+      letter-spacing: 1rem;
+      margin: 1rem 0;
+    }
+
+    .grid-section {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 1.5rem;
+    }
+
+    .card {
+      background: #f3f3f3;
+      border-radius: 10px;
+      padding: 1rem;
+      color: black;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+    }
+
+    .card img {
+      width: 100%;
+      border-radius: 8px;
+      margin-bottom: 0.5rem;
+      height: 220px;
+      object-fit: cover;
+    }
+
+    .card h3 {
+      margin: 0.3rem 0;
+      
+    }
+
+    .top-container::-webkit-scrollbar {
+      width: 10px;
+    }
+
+    .top-container::-webkit-scrollbar-thumb {
+      background: #f7cde2;
+      border-radius: 10px;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="nav">
+    <div class="left-header">
+      <img src="Genre-main/howl chibi.jpg" alt="User Avatar">
+      <a href="#">For you</a>
+      <a href="#" class="active">Browse</a>
+      <a href="#">My History</a>
+    </div>
+    <div class="search-box">Search</div>
+  </div>
+
+  <div class="top-container">
+    <section class="featured">
+      <img src="Comedy/top1.png" alt="Top Action 1">
+      <img src="Comedy/top2.jpg" alt="Top Action 2">
+      <img src="Comedy/top3.jpg" alt="Top Action 3">
+    </section>
+
+    <h1>Comedy</h1>
+
+    <section class="grid-section">
+      <div class="card">
+        <img src="Comedy/comedy1.png" alt="">
+        <h3>Beverly Hills Cop: Axel F</h3>
+        <p>2024</p>
+      </div>
+      <div class="card">
+        <img src="Comedy/comedy2.png" alt="">
+        <h3>Fall Guy</h3>
+        <p>2024</p>
+      </div>
+      <div class="card">
+        <img src="Comedy/comedy3.png" alt="">
+        <h3>Jackpot</h3>
+        <p>2023</p>
+      </div>
+      <div class="card">
+        <img src="Comedy/comedy4.jpg" alt="">
+        <h3>The Retirement Plan</h3>
+        <p>2023</p>
+      </div>
+      <div class="card">
+        <img src="Comedy/comedy5.png" alt="Mafia Mamma">
+        <h3>Mafia Mamma</h3>
+        <p>2023</p>
+      </div>
+      <div class="card">
+        <img src="Comedy/comedy6.png" alt="Asteroid City">
+        <h3>Asteroid City</h3>
+        <p>2023</p>
+      </div>
+      <div class="card">
+        <img src="Comedy/comedy7.png" alt="You People">
+        <h3>You People</h3>
+        <p>2023</p>
+      </div>
+      <div class="card">
+        <img src="Comedy/comedy8.png" alt="Family Pack">
+        <h3>Family Pack</h3>
+        <p>2024</p>
+      </div>
+      <div class="card">
+        <img src="Comedy/comedy9.png" alt="SHAZAM!">
+        <h3>SHAZAM!</h3>
+        <p>2019</p>
+      </div>
+      <div class="card">
+        <img src="Comedy/comedy10.jpg" alt="Genie">
+        <h3>Genie</h3>
+        <p>2023</p>
+      </div>
+      <div class="card">
+        <img src="Comedy/comedy11.png" alt="You're Cordially Invited">
+        <h3>You're Cordially Invited</h3>
+        <p>2025</p>
+      </div>
+      <div class="card">
+        <img src="Comedy/comedy12.png" alt="Poker Face">
+        <h3>Poker Face</h3>
+        <p>2023</p>
+      </div>
+      <div class="card">
+        <img src="Comedy/comedy13.png" alt="The Righteous Gemstones">
+        <h3>The Righteous Gemstones</h3>
+        <p>2024</p>
+      </div>
+      <div class="card">
+        <img src="Comedy/comedy14.png" alt="Another Simple Favor">
+        <h3>Another Simple Favor</h3>
+        <p>2023</p>
+      </div>
+      <div class="card">
+        <img src="Comedy/comedy15.png" alt="The Studio">
+        <h3>The Studio</h3>
+        <p>2024</p>
+      </div>
+      <div class="card">
+        <img src="Comedy/comedy16.png" alt="Hacks">
+        <h3>Hacks</h3>
+        <p>2024</p>
+      </div>
+      <div class="card">
+        <img src="Comedy/comedy17.png" alt="Death Unicorn">
+        <h3>Death Unicorn</h3>
+        <p>2024</p>
+      </div>
+      <div class="card">
+        <img src="Comedy/comedy18.png" alt="Elsbeth">
+        <h3>Elsbeth</h3>
+        <p>2023</p>
+      </div>
+      <div class="card">
+        <img src="Comedy/comedy19.png" alt="The Residence">
+        <h3>The Residence</h3>
+        <p>2024</p>
+      </div>
+      <div class="card">
+        <img src="Comedy/comedy20.png" alt="My Stepsister is a Vampire">
+        <h3>My Stepsister is a Vampire</h3>
+        <p>2024</p>
+      </div>
+      <div class="card">
+        <img src="Comedy/comedy21.png" alt="Mickey 17">
+        <h3>Mickey 17</h3>
+        <p>2025</p>
+      </div>
+
+    </section>
+  </div>
+
+</body>
+</html>
